@@ -1,9 +1,25 @@
 # Python Django with selenium: Getting Started
 
-本次專案進行網頁動態爬蟲，並建置於heroku上
-需要再heroku的setting中引入兩個buildpacks
+### 本次專案進行網頁動態爬蟲，並建置於heroku上
+### 需要再heroku的setting中引入兩個buildpacks
 https://github.com/heroku/heroku-buildpack-chromedriver
 https://github.com/heroku/heroku-buildpack-google-chrome
-如此才能以selenium進行動態爬蟲的動作
+### 如此才能以selenium進行動態爬蟲的動作
 
-再來登入heroku
+##以下動作在終端機執行
+### 需將此參數設置於heroku上
+heroku config:set GOOGLE_CHROME_BIN=/app/.apt/usr/bin/google-chrome
+heroku config:set CHROMEDRIVER_PATH=/app/.chromedriver/bin/chromedriver
+
+### 如有修改資料，或第一次使用需下載request.txt中套件
+git add .
+git commit -am "your_message"
+git push heroku master
+
+### 再來登入heroku
+heroku login
+### 開啟網頁
+heroku open
+
+##以上動作在終端機執行
+
