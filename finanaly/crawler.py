@@ -127,9 +127,9 @@ def tanlong(search):
             for src in driver.find_elements(By.XPATH, src_xpath):
                 srcli.append(src.get_attribute("src"))
             # 點擊下頁
-            driver.find_element_by_xpath("//a[@class='next_page']").click()
+            #driver.find_element_by_xpath("//a[@class='next_page']").click()
             # 隱含等待最多十秒進行下頁擷取
-            driver.implicitly_wait(10)
+            #driver.implicitly_wait(10)
         df['圖片'] = srcli
         df['商品名稱'] = nameli
         df['商品價格'] = priceli
@@ -199,9 +199,9 @@ def kingstone(search):
             for src3 in driver.find_elements(By.XPATH, src3_xpath):
                 srcli.append(src3.get_attribute("src"))
             # 點擊下頁
-            driver.find_element_by_xpath("//li[@class='pageNext']").click()
+            #driver.find_element_by_xpath("//li[@class='pageNext']").click()
             # 隱含等待最多十秒進行下頁擷取
-            driver.implicitly_wait(10)
+            #driver.implicitly_wait(10)
         df['圖片'] = srcli
         df['商品名稱'] = nameli
         df['商品價格'] = priceli
@@ -267,7 +267,7 @@ def eslite(search):
             for src in driver.find_elements(By.XPATH, src_xpath):
                 srcli.append(src.get_attribute("data-src"))
             # 點擊下頁
-            driver.find_element_by_xpath("//span[@class='icon-fa-chevron-right']").click()
+            #driver.find_element_by_xpath("//span[@class='icon-fa-chevron-right']").click()
         df['圖片'] = srcli
         df['商品名稱'] = nameli
         df['商品價格'] = priceli
@@ -333,9 +333,9 @@ def tcsb(search):
                 img = (src.get_attribute("style").split('"'))[1]
                 srcli.append(img)
             # 點擊下頁
-            driver.find_element_by_xpath("//ul[@class='pagination']//li//a[@class='page-link']").click()
+            #driver.find_element_by_xpath("//ul[@class='pagination']//li//a[@class='page-link']").click()
             ###強制等待三秒，待所有東西載入完成
-            sleep(3)
+            #sleep(3)
         df['圖片'] = srcli
         df['商品名稱'] = nameli
         df['商品價格'] = priceli
