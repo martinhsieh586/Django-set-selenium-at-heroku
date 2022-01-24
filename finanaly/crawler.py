@@ -242,7 +242,7 @@ def eslite(search):
         price_xpath = '//span[@class="price"]'
         src_xpath = "//div[@class='item-image-wrap']//img"
         for page in range(1, pages + 1):
-            time.sleep(3)
+            time.sleep(2)
             ### 抓取商品名稱欄位
             for name in driver.find_elements(By.XPATH, name_xpath):
                 nameli.append(name.get_attribute("title"))
@@ -288,7 +288,7 @@ def tcsb(search):
         driver=webdriver.Chrome(executable_path=os.environ.get("CHROMEDRIVER_PATH"),chrome_options=chrome_options)
         driver.get("https://www.tcsb.com.tw")
         driver.find_element_by_xpath("//div[@class='sc-LzLrX eBAuqO']").click()
-        time.sleep(3)
+        time.sleep(2)
         key_xpath = '//input[@class="ns-search-input"]'
         key_nodes = driver.find_element(By.XPATH, key_xpath)
         key_nodes.send_keys(search)
