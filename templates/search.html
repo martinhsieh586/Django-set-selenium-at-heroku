@@ -1,0 +1,64 @@
+{% extends "indexbase.html" %}
+{% block title %}
+{% endblock %}
+{% block content %}
+<!-- 商品查詢頁面 -->
+
+<!-- 主要陳列商品區塊 -->
+<div class="row">
+	<!-- 左側廣告投放區 -->
+	<div class="side">
+		<h2>廣告投放處</h2>
+	</div>
+	<!-- 右側查詢商品後之陳列區 -->
+	<div class="main">
+		<section class="ftco-section">
+			<div class="container">
+				{% load table_view_tag %}
+				<div class="row">
+					<div class="col-md-12">
+						<h3 class="h5 mb-4 text-center">你所查詢商品："{{ target }}"回傳比較表</h3>
+						<div class="table-wrap">
+							<table class="table">
+								<tbody>
+								{% for index, row in goodsdf.iterrows %}
+									<tr class="alert" role="alert">
+										<td>
+											<div class="img" style="background-image: url({{row|get_obj_attr:'圖片'}});"></div>
+										</td>
+										<td>
+											<div class="email">
+												<span>
+													<a href="{{row|get_obj_attr:'url'}}">{{row|get_obj_attr:'商品名稱'}}</a>
+												</span>
+												<span>
+													${{row|get_obj_attr:'商品價格'}}
+												</span>
+											</div>
+										</td>
+										<td>{{row|get_obj_attr:'商品所屬網站'}}</td>
+										{% if status == True %}
+										<td>
+											<form name="save" method="POST" action="/pocketlist/">
+												{% csrf_token %}
+												<input type="hidden" name="name" value="{{row|get_obj_attr:'商品名稱'}}">
+												<input type="hidden" name="url" value="{{row|get_obj_attr:'url'}}">
+												<button type="submit" class="close" data-dismiss="alert" aria-label="Close">
+													<span aria-hidden="true"><img src="{% static 'images/star.png' %}" width=50px height=auto/></span>
+												</button>
+											</form>
+										</td>
+										{% else %}
+										{% endif %}	
+									</tr>
+								{% endfor %}
+							</table>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+	</div>
+</div>
+
+{% endblock %}

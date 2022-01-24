@@ -1,0 +1,50 @@
+{% extends "base.html" %}
+{% block title %}
+	<title>會員中心</title>
+{% endblock %}
+{% block content %}
+<div class="container">
+	<div class="row">
+		<div class="col-100">
+			<div class="title">
+				<b>登入會員</b>
+			</div>
+		</div>
+	</div>
+	<form method="POST" action="/login/" accept-charset="UTF-8">
+		{% csrf_token %}
+		<div class="row">
+			<div class="col-25">
+			<label>
+				帳號
+				<i class="fa fa-envelope"></i>
+			</label>
+			</div>
+			<div class="col-75">
+				{{userform.useremail}}
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-25">
+			<label>
+				密碼
+				<i class="fa fa-lock"></i>
+			</label>
+			</div>
+			<div class="col-75">
+				{{userform.userpassword}}
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-100">
+				<input type="submit" value="提交">
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-100">
+				<span class="alt">{{message}}</span>
+			</div>
+		</div>
+	</form>
+</div>
+{% endblock %}

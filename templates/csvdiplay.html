@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+{% block title %}
+	<title>會員中心</title>
+{% endblock %}
+{% block content %}
+{% load index %}
+	<table border="1" >
+	<caption>
+	<h1>
+	各地區空氣品質指標表格如下
+	<h1>
+	</caption>
+	<tr>
+	{% for i in data %}
+		<th>{{ i }}</th>
+	{% endfor %}
+	</tr>
+		{%  for row in data.values.tolist %}
+			<tr>
+			{% for li1 in row %}
+				{% if forloop.counter0 == 0 %}
+					<td><a href="{{ li|index:forloop.parentloop.counter0 }}">{{ li1 }}</a></td>
+				{% else %}
+					<td>{{ li1 }}</td>
+				{% endif %}				
+			{% endfor %}
+			</tr>
+		{% endfor %}
+	</table>
+{% endblock %}

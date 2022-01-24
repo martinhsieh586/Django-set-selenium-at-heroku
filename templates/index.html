@@ -1,0 +1,56 @@
+{% extends "indexbase.html" %}
+{% block title %}
+{% endblock %}
+{% block content %}
+<!-- 首頁 -->
+
+<!-- The flexible grid (content) -->
+<div class="row">
+	<!-- 左側廣告投放區 -->
+	<div class="side">
+		<h2>廣告投放處</h2>
+	</div>
+	<!-- 右側熱門討論文章區，//可增加查詢某時間段的文章的功能，類似google// -->
+	<div class="main">
+		<section class="ftco-section">
+			<div class="container">
+				{% load table_view_tag %}
+				<div class="row">
+					<div class="col-md-12">
+						<h3 class="h5 mb-4 text-center">近期熱門討論書籍之文章</h3>
+						<div class="table-wrap">
+							<table class="table">
+								<tbody>
+								{% for index, row in articledf.iterrows %}
+									<tr class="alert" role="alert">
+										<td>
+											<div class="img" style="background-image: url({{row|get_obj_attr:'imgsrc'}});"></div>
+										</td>
+										<td><a href="{{row|get_obj_attr:'url'}}">{{row|get_obj_attr:'title'}}</a></td>
+										<td>{{row|get_obj_attr:'info'}}</td>
+										<td>{{row|get_obj_attr:'content'}}</td>
+										{% if status == True %}
+										<td>
+											<form name="save" method="POST" action="/pocketlist/">
+											{% csrf_token %}
+											<input type="hidden" name="name" value="{{row|get_obj_attr:'title'}}">
+											<input type="hidden" name="url" value="{{row|get_obj_attr:'url'}}">
+											<button type="submit" class="close">
+												<img src="{% static 'images/star.png' %}" width=50px height=auto>
+											</button>
+											</form>
+										</td>
+										{% else %}
+										{% endif %}	
+									</tr>
+								{% endfor %}
+							</table>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+	</div>
+</div>
+
+{% endblock %}

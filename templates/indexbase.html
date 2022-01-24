@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>	
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<link rel="stylesheet" type="text/css" href="{% static 'css/indexstyle.css' %}" />
+<link rel="stylesheet" type="text/css" href="{% static 'css/slider.css' %}" />
+<link rel="stylesheet" type="text/css" href="{% static 'css/com.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'css/searchbar.css' %}">
+<title>比價網</title>
+{% block title %}{% endblock %}
+</head>
+<body>
+<div class="top">
+  <h3>
+	<div class="topnavbar">
+		<a href="/index/">
+			<img src="{% static "images/logo.jpg" %}" alt="logo" width=auto height=40px />
+		</a>
+		<div class="box">
+			<div class="container-4">
+			<form action="/search/" method="get">
+				<input type="text" id="search" placeholder="Search...">
+				<button type="submit" class="icon">
+					<img src="{% static 'images/search.png' %}" width=20px height=auto>
+				</button>
+			</form>
+		  </div>
+		</div>
+		{% if status == True %}
+			<h3 class="welcome">歡迎回來，{{ name }}
+			<a href="/pocketlist/">收藏庫</a>
+			<a href="/login/">登出</a>
+			<h3>
+		{% else %}
+			<a href="/login/">登入</a>
+			<a href="/register/">註冊</a>
+		{% endif %}	
+	</div>
+  </h3>
+</div>
+
+<div class="header">
+<div class="rwd_slider_container_wrapper">
+  <div class="rwd_slider_container">
+    <div class="slider_container" >
+      <div>
+        <img src="https://via.placeholder.com/400x280.png?text=1" alt="pure css slider" width="400" height="280" />
+      </div>
+      <div>
+        <img src="https://via.placeholder.com/400x280.png?text=2" alt="pure css slider" width="400" height="280" />
+      </div>
+      <div>
+        <img src="https://via.placeholder.com/400x280.png?text=3" alt="pure css slider" width="400" height="280" />
+      </div>
+      <div>
+        <img src="https://via.placeholder.com/400x280.png?text=4" alt="pure css slider" width="400" height="280" />
+      </div>
+      <div>
+        <img src="https://via.placeholder.com/400x280.png?text=5" alt="pure css slider" width="400" height="280" />
+      </div>
+    </div><!-- end of .pure_slider_container -->
+  </div><!-- end of .embed-responsive -->
+</div><!-- end of .embed-responsive-box -->
+</div >
+
+<!--本次爬蟲還在學習中，有些bug需要時間去處理，本次未爬出以下資訊改以網址呈現，下次改進 -->
+<div class="bodynavbar">
+	<a href="https://www.tenlong.com.tw/">熱門電腦用書</a>
+	<a href="https://www.books.com.tw/web/sys_tdrntb/books/">博客來暢銷書籍</a>
+	<a href="https://www.tenlong.com.tw/events/2021-top100#/images/logo06.png">天瓏熱門書籍</a>
+	<a href="https://www.kingstone.com.tw/bestseller/daily">金石堂熱門書籍</a>
+	<a href="https://www.eslite.com/best-sellers/bookstore">誠品熱門書籍</a>
+	<a href="https://www.tcsb.com.tw/v2/activity/10106">墊腳石熱門書籍</a>
+	<a href="/index/">近期熱門討論書籍之文章</a>
+</div>
+	{% block content %}{% endblock %}
+<!-- Footer -->
+<div class="footer">
+	<span class="product_remind">
+		※ 本服務提供之商品價格 、漲跌紀錄等資訊皆為自動化程式蒐集，可能因各種不可預期之狀況而影響正確性或完整性， 僅供使用者參考之用，本服務不負任何擔保責任。
+		購買前請以購買當時銷售頁面資料為準自行判斷，該等資訊亦不得作為向第三人為任何主張之依據，包括但不限於：主張市場上有其他更優惠價格之補償或其他請求。
+	</span>
+	<a href="mailto:martin588@gmail.com">廣告工商服務可以電子郵件與我們洽談</a>
+</div>
+</body>
+</html>

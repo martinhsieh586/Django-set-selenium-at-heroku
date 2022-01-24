@@ -1,0 +1,118 @@
+* {
+	box-sizing: border-box;
+}
+
+input[type=text], select, textarea {
+	width: 90%;				/*物件寬度*/
+	padding: 12px;			/*物件垂直長度*/
+	border: 1px solid #ccc;	/*物件邊線*/
+	border-radius: 4px;		/*圓角*/
+	resize: vertical;		/*垂直方向調整物件大小*/
+}
+
+input[type=email], select, textarea {
+	width: 90%;				/*物件寬度*/
+	padding: 12px;			/*物件垂直長度*/
+	border: 1px solid #ccc;	/*物件邊線*/
+	border-radius: 4px;		/*圓角*/
+	resize: vertical;		/*垂直方向調整物件大小*/
+}
+
+label {
+	display: inline-block;
+}
+
+input[type=submit] {
+	background-color: #04AA6D;
+	color: white;
+	padding: 12px 50px;
+	border: none;
+	border-radius: 4px;
+	cursor: pointer;
+	float: left;
+	position:relative;
+	right:-50%;
+	font-size:20pt;
+}
+
+input[type=submit]:hover {
+	background-color: #45a049;
+}
+
+.container {
+	border-radius: 15px;
+	padding: 10% 10px 10% 20px;	/*上 右 下 左 長度*/
+	background-color: #f2f2f2;
+}
+
+.col-25 {
+	float: left;
+	width: 25%;
+	padding: 0px 0px 0px 80px;
+	font-size:20pt;
+}
+
+.col-75 {
+	float: left;
+	width: 75%;
+	font-size:20pt;
+}
+
+.col-100 {
+	float: left;
+	width: 100%;
+	font-size:20pt;
+}
+
+/* Clear floats after the columns */
+.row:after {
+	height:20px;
+	content: "";
+	display: table;
+	clear: both;
+}
+
+.title {
+	float: left;
+	white-space:nowrap;
+	padding: 0px 20px 0px 120px;
+	color:blue;
+	font-size:40pt;
+}
+
+.alt{
+	float: left;
+	margin-top: 10px;
+	padding: 0px 20px 0px 120px;
+	color:red;
+	font-size:15pt;
+	white-space:nowrap;		/*強制不換行*/
+}
+
+/* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+	.col-25{
+		width: 100%;
+		padding: 0px 0px 0px 0px;
+	}
+	.col-75{
+		width: 100%;
+		margin-top: 5px;
+	}
+	.col-100{
+		margin-top: 10px;
+		font-size:15pt;
+	}
+	input[type=submit] {
+		width: 50%;
+		left:25%;
+	}
+	input[type=email], select, textarea {
+		width: 90%;
+		right:0%;
+	}
+	input[type=text], select, textarea {
+		width: 90%;
+		right:0%;
+	}
+}

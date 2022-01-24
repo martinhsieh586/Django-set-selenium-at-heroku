@@ -1,0 +1,31 @@
+{% extends "indexbase.html" %}
+{% block title %}
+
+{% endblock %}
+{% block content %}
+
+<!-- 首頁 -->
+
+<!-- The flexible grid (content) -->
+<div class="row">
+	<!-- 左側廣告投放區 -->
+	<div class="side">
+		<h2>廣告投放處</h2>
+	</div>
+	<!-- 右側收藏列表 -->
+	<div class="main">
+		<h2>{{ name }} 以下為您的收藏清單</h2>
+		<span class="error">{{ error }}</span>
+		<section>
+		<table>
+			{% for pocket in query %}
+			<tr>
+				<td><a href="{{ pocket.url }}">{{ pocket.name }}</a></td>
+			</tr>
+			{% endfor %}
+		</table>
+		</section>
+	</div>
+</div>
+
+{% endblock %}
