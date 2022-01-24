@@ -6,3 +6,4 @@ https://github.com/heroku/heroku-buildpack-chromedriver
 https://github.com/heroku/heroku-buildpack-google-chrome
 如此才能以selenium進行動態爬蟲的動作
 
+再來登入heroku
