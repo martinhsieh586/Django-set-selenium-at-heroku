@@ -109,8 +109,8 @@ def pocketlist(request):
             targetname = request.POST['name']
             name = request.session['name']
             try:
-                unit = pocket.objects.all()
-                unit.delete()
+                unit = pocket.objects.create(username=request.session['name'], url=targeturl, name=targetname)
+                unit.save()
             except:
                 error = "您已收藏過此文章或商品了！"
         try:
