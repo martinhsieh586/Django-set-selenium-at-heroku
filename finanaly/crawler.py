@@ -26,8 +26,8 @@ def books(search):
         keyword.submit()
         ###隱含等待(最多十秒)
         driver.implicitly_wait(10)
-        ##爬取四頁資料
-        pages = 3
+        ##爬取2頁資料
+        pages = 2
         df = {}
         df = pd.DataFrame(df)
         nameli = []
@@ -96,8 +96,8 @@ def tanlong(search):
         key_nodes.submit()
         ###隱含等待(最多十秒)
         driver.implicitly_wait(10)
-        ##爬取四頁資料
-        pages = 3
+        ##爬取2頁資料
+        pages = 2
         df = {}
         df = pd.DataFrame(df)
         nameli = []
@@ -156,8 +156,8 @@ def kingstone(search):
         keyword.submit()
         ###隱含等待(最多十秒)
         driver.implicitly_wait(10)
-        ##爬取四頁資料
-        pages = 3
+        ##爬取2頁資料
+        pages = 2
         df = {}
         df = pd.DataFrame(df)
         nameli = []
@@ -229,8 +229,8 @@ def eslite(search):
         ###隱含等待(最多十秒)，及更新頁面(誠品有時第一次進入會報錯)
         driver.implicitly_wait(10)
         driver.refresh();
-        ##爬取三頁資料
-        pages = 3
+        ##爬取2頁資料
+        pages = 2
         df = {}
         df = pd.DataFrame(df)
         nameli = []
@@ -295,7 +295,7 @@ def tcsb(search):
         driver.find_element_by_xpath("//div[@class='search-wrapper']//a").click()
         ###隱含等待(最多十秒)
         driver.implicitly_wait(10)
-        pages = 3
+        pages = 2
         df = {}
         df = pd.DataFrame(df)
         nameli = []
