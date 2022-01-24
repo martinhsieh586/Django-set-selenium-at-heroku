@@ -1,2 +1,2 @@
-web: gunicorn pyfin.wsgi --graceful-timeout 1200
-gunicorn hello:finaly.view --graceful-timeout 1200
+web: gunicorn pyfin.wsgi
+gunicorn hello:finaly.view --timeout 1200
