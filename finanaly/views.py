@@ -1,5 +1,4 @@
 from django.shortcuts import render, redirect
-from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 from finanaly.models import user, pocket
 from finanaly.form import UserForm, LoginForm
 from finanaly import crawler, crawler_article

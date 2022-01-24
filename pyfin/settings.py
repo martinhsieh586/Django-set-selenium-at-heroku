@@ -40,7 +40,6 @@ INSTALLED_APPS = [
     'django.contrib.sessions',  #自動安裝session的app
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'pure_pagination',  # 分頁
     'finanaly.apps.FinanalyConfig',
 ]
 
@@ -75,13 +74,6 @@ TEMPLATES = [
 ]
 
 WSGI_APPLICATION = 'pyfin.wsgi.application'
-
-PAGINATION_SETTING={
-    'PAGE_RANGE_DISPLAYED': 3,
-    'MARGIN_PAGES_DISPLAYED': 0,
-
-    'SHOW_FIRST_PAGE_WHEN_INVALID': True,
-}
 
 
 # Database
