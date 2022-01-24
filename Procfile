@@ -1,1 +1,1 @@
-web: gunicorn --timeout 1200 pyfin.wsgi
+web: gunicorn --timeout 3600 pyfin.wsgi
