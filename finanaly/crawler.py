@@ -5,6 +5,7 @@ from selenium.webdriver.common.by import By
 import time
 from time import sleep
 import re
+import os
 
 #爬取博客來
 def books(search):
