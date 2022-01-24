@@ -1,2 +1,1 @@
-web: gunicorn pyfin.wsgi
-gunicorn hello:pyfin.wsgi --timeout 1200
+web: gunicorn --timeout 1200 pyfin.wsgi
