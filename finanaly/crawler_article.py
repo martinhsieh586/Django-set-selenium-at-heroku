@@ -11,12 +11,14 @@ def okapi():
     chrome_options.binary_location = os.environ.get('GOOGLE_CHROME_BIN')
     chrome_options.add_argument("--window-size=1920,1080")
     chrome_options.add_argument("--start-maximized")
-    chrome_options.add_argument("--headless")                               #背景執行
-    chrome_options.add_argument('--no-sandbox')                             #解决DevToolsActivePort文件不存在的報錯
-    chrome_options.add_argument('--disable-gpu')                            #google需要加上來該屬性迴避bug
-    chrome_options.add_argument('blink-settings=imagesEnabled=false')       #禁止加載圖片
-    chrome_options.add_argument("user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/95.0.4638.69 Safari/537.36")
-    driver = webdriver.Chrome(executable_path=os.environ.get("CHROMEDRIVER_PATH"), chrome_options=chrome_options)
+    chrome_options.add_argument("--headless")  # 背景執行
+    chrome_options.add_argument('--no-sandbox')  # 解决DevToolsActivePort文件不存在的報錯
+    chrome_options.add_argument('--disable-gpu')  # google需要加上來該屬性迴避bug
+    chrome_options.add_argument('blink-settings=imagesEnabled=false')  # 禁止加載圖片
+    chrome_options.add_argument(
+        "user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/95.0.4638.69 Safari/537.36")
+    driver=webdriver.Chrome(executable_path=os.environ.get("CHROMEDRIVER_PATH"),chrome_options=chrome_options)
+    #driver = webdriver.Chrome(chrome_options=chrome_options)
     driver.get("https://okapi.books.com.tw/list/123?loc=nav_10_000")
     ###隱含等待(最多十秒)
     driver.implicitly_wait(10)
