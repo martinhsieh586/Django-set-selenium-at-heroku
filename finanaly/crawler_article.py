@@ -7,7 +7,6 @@ import re
 #爬取博客來okapi熱門討論文章
 def okapi():
     chrome_options = Options()
-        chrome_options.binary_location = os.environ.get('GOOGLE_CHROME_BIN')
     chrome_options.add_argument("--window-size=1920,1080")
     chrome_options.add_argument("--start-maximized")
     chrome_options.add_argument("--headless")

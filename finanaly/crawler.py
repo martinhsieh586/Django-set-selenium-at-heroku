@@ -10,7 +10,6 @@ import re
 def books(search):
     try:
         chrome_options = Options()
-        chrome_options.binary_location = os.environ.get('GOOGLE_CHROME_BIN')
         chrome_options.add_argument("--window-size=1920,1080")
         chrome_options.add_argument("--start-maximized")
         chrome_options.add_argument("--headless")
@@ -76,7 +75,6 @@ def books(search):
 def tanlong(search):
     try:
         chrome_options = Options()
-        chrome_options.binary_location = os.environ.get('GOOGLE_CHROME_BIN')
         chrome_options.add_argument("--window-size=1920,1080")
         chrome_options.add_argument("--start-maximized")
         chrome_options.add_argument("--headless")
@@ -134,7 +132,6 @@ def tanlong(search):
 def kingstone(search):
     try:
         chrome_options = Options()
-        chrome_options.binary_location = os.environ.get('GOOGLE_CHROME_BIN')
         chrome_options.add_argument("--window-size=1920,1080")
         chrome_options.add_argument("--start-maximized")
         chrome_options.add_argument("--headless")
@@ -202,7 +199,6 @@ def kingstone(search):
 def eslite(search):
     try:
         chrome_options = Options()
-        chrome_options.binary_location = os.environ.get('GOOGLE_CHROME_BIN')
         chrome_options.add_argument("--window-size=1920,1080")
         chrome_options.add_argument("--start-maximized")
         chrome_options.add_argument("--headless")
@@ -264,7 +260,6 @@ def eslite(search):
 def tcsb(search):
     try:
         chrome_options = Options()
-        chrome_options.binary_location = os.environ.get('GOOGLE_CHROME_BIN')
         chrome_options.add_argument("--window-size=1920,1080")
         chrome_options.add_argument("--start-maximized")
         chrome_options.add_argument("--headless")
