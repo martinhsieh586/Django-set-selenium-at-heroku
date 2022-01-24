@@ -28,8 +28,8 @@ def books(search):
         keyword.submit()
         ###隱含等待(最多十秒)
         driver.implicitly_wait(10)
-        ##爬取2頁資料
-        pages = 2
+        ##爬取1頁資料
+        pages = 1
         df = {}
         df = pd.DataFrame(df)
         nameli = []
@@ -100,8 +100,8 @@ def tanlong(search):
         key_nodes.submit()
         ###隱含等待(最多十秒)
         driver.implicitly_wait(10)
-        ##爬取2頁資料
-        pages = 2
+        ##爬取1頁資料
+        pages = 1
         df = {}
         df = pd.DataFrame(df)
         nameli = []
@@ -162,8 +162,8 @@ def kingstone(search):
         keyword.submit()
         ###隱含等待(最多十秒)
         driver.implicitly_wait(10)
-        ##爬取2頁資料
-        pages = 2
+        ##爬取1頁資料
+        pages = 1
         df = {}
         df = pd.DataFrame(df)
         nameli = []
@@ -237,8 +237,8 @@ def eslite(search):
         ###隱含等待(最多十秒)，及更新頁面(誠品有時第一次進入會報錯)
         driver.implicitly_wait(10)
         driver.refresh();
-        ##爬取2頁資料
-        pages = 2
+        ##爬取1頁資料
+        pages = 1
         df = {}
         df = pd.DataFrame(df)
         nameli = []
@@ -250,7 +250,7 @@ def eslite(search):
         price_xpath = '//span[@class="price"]'
         src_xpath = "//div[@class='item-image-wrap']//img"
         for page in range(1, pages + 1):
-            time.sleep(3)
+            time.sleep(2)
             ### 抓取商品名稱欄位
             for name in driver.find_elements(By.XPATH, name_xpath):
                 nameli.append(name.get_attribute("title"))
@@ -298,14 +298,15 @@ def tcsb(search):
         # driver = webdriver.Chrome(chrome_options=chrome_options)
         driver.get("https://www.tcsb.com.tw")
         driver.find_element_by_xpath("//div[@class='sc-LzLrX eBAuqO']").click()
-        time.sleep(3)
+        time.sleep(1)
         key_xpath = '//input[@class="ns-search-input"]'
         key_nodes = driver.find_element(By.XPATH, key_xpath)
         key_nodes.send_keys(search)
         driver.find_element_by_xpath("//div[@class='search-wrapper']//a").click()
         ###隱含等待(最多十秒)
         driver.implicitly_wait(10)
-        pages = 2
+        ##爬取1頁資料
+        pages = 1
         df = {}
         df = pd.DataFrame(df)
         nameli = []
@@ -338,8 +339,8 @@ def tcsb(search):
                 srcli.append(img)
             # 點擊下頁
             driver.find_element_by_xpath("//ul[@class='pagination']//li//a[@class='page-link']").click()
-            ###強制等待三秒，待所有東西載入完成
-            sleep(3)
+            ###強制等待2秒，待所有東西載入完成
+            sleep(2)
         df['圖片'] = srcli
         df['商品名稱'] = nameli
         df['商品價格'] = priceli
