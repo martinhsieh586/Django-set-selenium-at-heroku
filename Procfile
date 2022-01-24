@@ -1,2 +1,2 @@
 web: gunicorn pyfin.wsgi
-gunicorn hello:finaly.view --timeout 1200
+gunicorn hello:pyfin.wsgi --timeout 1200
