@@ -250,7 +250,7 @@ def eslite(search):
         price_xpath = '//span[@class="price"]'
         src_xpath = "//div[@class='item-image-wrap']//img"
         for page in range(1, pages + 1):
-            time.sleep(2)
+            time.sleep(3)
             ### 抓取商品名稱欄位
             for name in driver.find_elements(By.XPATH, name_xpath):
                 nameli.append(name.get_attribute("title"))
@@ -298,7 +298,7 @@ def tcsb(search):
         # driver = webdriver.Chrome(chrome_options=chrome_options)
         driver.get("https://www.tcsb.com.tw")
         driver.find_element_by_xpath("//div[@class='sc-LzLrX eBAuqO']").click()
-        time.sleep(1)
+        time.sleep(3)
         key_xpath = '//input[@class="ns-search-input"]'
         key_nodes = driver.find_element(By.XPATH, key_xpath)
         key_nodes.send_keys(search)
@@ -339,8 +339,8 @@ def tcsb(search):
                 srcli.append(img)
             # 點擊下頁
             driver.find_element_by_xpath("//ul[@class='pagination']//li//a[@class='page-link']").click()
-            ###強制等待2秒，待所有東西載入完成
-            sleep(2)
+            ###強制等待三秒，待所有東西載入完成
+            sleep(3)
         df['圖片'] = srcli
         df['商品名稱'] = nameli
         df['商品價格'] = priceli
