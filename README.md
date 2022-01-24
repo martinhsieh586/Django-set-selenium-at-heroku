@@ -24,6 +24,8 @@ git push heroku master
 
 ### 再來登入heroku
 heroku login
+###連結app
+heroku git:remote -a scarpygoods
 ### 開啟網頁
 heroku open
 
