@@ -1,4 +1,4 @@
-# Python Django: Getting Started
+# Python Django with selenium: Getting Started
 
 A barebones Django app, which can easily be deployed to Heroku.
 
