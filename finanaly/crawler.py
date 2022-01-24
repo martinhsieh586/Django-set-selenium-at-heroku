@@ -255,7 +255,6 @@ def eslite(search):
                     priceli.append(trans)
                 else:
                     priceli.append(null)
-
             ### 抓取商品超連結
             for url in driver.find_elements(By.XPATH, name_xpath):
                 urlli.append(url.get_attribute("href"))
@@ -329,7 +328,7 @@ def tcsb(search):
             # 點擊下頁
             driver.find_element_by_xpath("//ul[@class='pagination']//li//a[@class='page-link']").click()
             ###強制等待三秒，待所有東西載入完成
-            sleep(3)
+            #sleep(3)
         df['圖片'] = srcli
         df['商品名稱'] = nameli
         df['商品價格'] = priceli
