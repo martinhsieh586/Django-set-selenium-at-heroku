@@ -18,8 +18,7 @@ def books(search):
         chrome_options.add_argument('--no-sandbox')  # 解决DevToolsActivePort文件不存在的報錯
         chrome_options.add_argument('--disable-gpu')  # google需要加上來該屬性迴避bug
         chrome_options.add_argument('blink-settings=imagesEnabled=false')  # 禁止加載圖片
-        chrome_options.add_argument(
-            "user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/95.0.4638.69 Safari/537.36")
+        chrome_options.add_argument("user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/95.0.4638.69 Safari/537.36")
         driver = webdriver.Chrome(executable_path=os.environ.get("CHROMEDRIVER_PATH"), chrome_options=chrome_options)
         # driver = webdriver.Chrome(chrome_options=chrome_options)
         driver.get("https://www.books.com.tw/?loc=tw_logo_001")
@@ -89,8 +88,7 @@ def tanlong(search):
         chrome_options.add_argument('--no-sandbox')  # 解决DevToolsActivePort文件不存在的報錯
         chrome_options.add_argument('--disable-gpu')  # google需要加上來該屬性迴避bug
         chrome_options.add_argument('blink-settings=imagesEnabled=false')  # 禁止加載圖片
-        chrome_options.add_argument(
-            "user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/95.0.4638.69 Safari/537.36")
+        chrome_options.add_argument("user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/95.0.4638.69 Safari/537.36")
         driver = webdriver.Chrome(executable_path=os.environ.get("CHROMEDRIVER_PATH"), chrome_options=chrome_options)
         # driver = webdriver.Chrome(chrome_options=chrome_options)
         driver.get("https://www.tenlong.com.tw")
@@ -152,8 +150,7 @@ def kingstone(search):
         chrome_options.add_argument('--no-sandbox')  # 解决DevToolsActivePort文件不存在的報錯
         chrome_options.add_argument('--disable-gpu')  # google需要加上來該屬性迴避bug
         chrome_options.add_argument('blink-settings=imagesEnabled=false')  # 禁止加載圖片
-        chrome_options.add_argument(
-            "user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/95.0.4638.69 Safari/537.36")
+        chrome_options.add_argument("user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/95.0.4638.69 Safari/537.36")
         driver = webdriver.Chrome(executable_path=os.environ.get("CHROMEDRIVER_PATH"), chrome_options=chrome_options)
         # driver = webdriver.Chrome(chrome_options=chrome_options)
         driver.get("https://www.kingstone.com.tw")
@@ -225,8 +222,7 @@ def eslite(search):
         chrome_options.add_argument('--no-sandbox')  # 解决DevToolsActivePort文件不存在的報錯
         chrome_options.add_argument('--disable-gpu')  # google需要加上來該屬性迴避bug
         chrome_options.add_argument('blink-settings=imagesEnabled=false')  # 禁止加載圖片
-        chrome_options.add_argument(
-            "user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/95.0.4638.69 Safari/537.36")
+        chrome_options.add_argument("user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/95.0.4638.69 Safari/537.36")
         driver = webdriver.Chrome(executable_path=os.environ.get("CHROMEDRIVER_PATH"), chrome_options=chrome_options)
         # driver = webdriver.Chrome(chrome_options=chrome_options)
         driver.get("https://www.eslite.com")
@@ -292,8 +288,7 @@ def tcsb(search):
         chrome_options.add_argument('--no-sandbox')  # 解决DevToolsActivePort文件不存在的報錯
         chrome_options.add_argument('--disable-gpu')  # google需要加上來該屬性迴避bug
         chrome_options.add_argument('blink-settings=imagesEnabled=false')  # 禁止加載圖片
-        chrome_options.add_argument(
-            "user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/95.0.4638.69 Safari/537.36")
+        chrome_options.add_argument("user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/95.0.4638.69 Safari/537.36")
         driver = webdriver.Chrome(executable_path=os.environ.get("CHROMEDRIVER_PATH"), chrome_options=chrome_options)
         # driver = webdriver.Chrome(chrome_options=chrome_options)
         driver.get("https://www.tcsb.com.tw")

@@ -91,7 +91,8 @@ def search(request):
     #取得搜尋值
     target = request.GET.get('search', '')
     #將各網頁爬取資料彙集成一資料表，並傳回網頁
-    goodsdf = pd.concat([crawler.books(target), crawler.tanlong(target), crawler.kingstone(target), crawler.eslite(target), crawler.tcsb(target)], ignore_index=True)
+    #goodsdf = pd.concat([crawler.books(target), crawler.tanlong(target), crawler.kingstone(target), crawler.eslite(target), crawler.tcsb(target)], ignore_index=True)
+    goodsdf = pd.concat([crawler.books(target), crawler.tanlong(target), crawler.kingstone(target)], ignore_index=True)
     goodsdf = goodsdf.dropna(subset=['商品價格'])
     goodsdf = goodsdf.sort_values(by="商品價格", ascending=True)
     return render(request, "search.html", locals())
