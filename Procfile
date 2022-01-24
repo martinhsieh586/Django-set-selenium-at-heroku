@@ -1,1 +1,1 @@
-web: gunicorn pyfin.wsgi
+web: gunicorn pyfin.wsgi -b 0.0.0.0:$PORT --timeout 1200
