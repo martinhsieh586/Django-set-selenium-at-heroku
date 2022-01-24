@@ -6,6 +6,8 @@ https://github.com/heroku/heroku-buildpack-chromedriver
 https://github.com/heroku/heroku-buildpack-google-chrome
 ### 如此才能以selenium進行動態爬蟲的動作
 
+###爬蟲兩套件，craweler、crawler_article分別是爬取商品及文章，皆是自寫套件
+
 ##以下動作在終端機執行
 ### 需將此參數設置於heroku上
 heroku config:set GOOGLE_CHROME_BIN=/app/.apt/usr/bin/google-chrome
@@ -23,3 +25,4 @@ heroku open
 
 ##以上動作在終端機執行
 
+##以下為demo影片連結，更快速了解網站架構，及專案內涵
