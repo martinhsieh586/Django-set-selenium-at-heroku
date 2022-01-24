@@ -17,7 +17,7 @@ from django.conf.urls import url
 from django.conf import settings
 from django.conf.urls.static import static
 from django.contrib import admin
-from finanaly.views import login, register, index, csvdiplay, search, pocketlist
+from finanaly.views import login, register, index, search, pocketlist
 from django.contrib.staticfiles.urls import staticfiles_urlpatterns
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
@@ -26,7 +26,6 @@ urlpatterns = [
     url(r'^index/$', index),
     url(r'^pocketlist/$', pocketlist),
     url(r'^search/$', search),
-    url(r'^csvdiplay/$', csvdiplay),
 ]
 
 urlpatterns += staticfiles_urlpatterns()
