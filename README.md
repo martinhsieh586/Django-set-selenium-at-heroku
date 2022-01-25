@@ -1,11 +1,23 @@
 # Python Django with selenium: Getting Started
 
+#網頁連結
+##登入(*建議，訪客模式無法使用收藏功能*)
+https://scarpygoods.herokuapp.com/login/
+##註冊
+https://scarpygoods.herokuapp.com/register/
+##首頁(熱門文章)
+https://scarpygoods.herokuapp.com/index/
+##搜尋(價格排序商品)
+https://scarpygoods.herokuapp.com/search/
+
 ### 本次專案進行網頁動態爬蟲，並建置於heroku上
 ### 需要再heroku的setting中引入兩個buildpacks
 https://github.com/heroku/heroku-buildpack-chromedriver
 https://github.com/heroku/heroku-buildpack-google-chrome
 ### 如此才能以selenium進行動態爬蟲的動作
 
+##爬蟲檔案
+##"finaly\craweler"、"finaly\craweler"
 ###爬蟲兩套件，craweler、crawler_article分別是爬取商品及文章，皆是自寫套件
 
 ###生成套件文件 requirements.txt
@@ -32,6 +44,10 @@ heroku open
 ##以上動作在終端機執行
 
 ##以下為demo影片連結，更快速了解網站架構，及專案內涵
+###搜尋文章demo
+https://www.youtube.com/watch?v=jXTCfQODdwU
+###搜尋商品demo
+https://www.youtube.com/watch?v=pRSR7oaIuRc&t=74s
 
 ###目前因技術上問題無法一次爬取過多資料，最多兩頁
 ###因爬取皆是商品，價格較穩定，之後可用此技術爬取價格較易變動的商品，如:股票
