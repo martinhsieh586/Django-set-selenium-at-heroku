@@ -1,4 +1,4 @@
-bulid Python Django in heroku with selenium: Getting Started
+Build Python Django in heroku with selenium: Getting Started
 ==========
  python version:3.8
 Features:
