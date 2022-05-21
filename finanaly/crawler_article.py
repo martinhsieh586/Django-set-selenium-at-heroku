@@ -17,7 +17,7 @@ def okapi():
     chrome_options.add_argument('blink-settings=imagesEnabled=false')  # 禁止加載圖片
     chrome_options.add_argument(
         "user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/95.0.4638.69 Safari/537.36")
-    driver = webdriver.Chrome(execution_path=chrome_options.binary_location, chrome_options=chrome_options)
+    driver = webdriver.Chrome(executable_path=os.environ.get("CHROMEDRIVER_PATH"), chrome_options=chrome_options)
     driver.get("https://okapi.books.com.tw/list/123?loc=nav_10_000")
     # 隱含等待(最多十秒)
     driver.implicitly_wait(10)

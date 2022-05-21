@@ -21,7 +21,7 @@ def books(search):
         chrome_options.add_argument('blink-settings=imagesEnabled=false')  # 禁止加載圖片
         chrome_options.add_argument(
             "user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/95.0.4638.69 Safari/537.36")
-        driver = webdriver.Chrome(execution_path=chrome_options.binary_location, chrome_options=chrome_options)
+        driver = webdriver.Chrome(executable_path=os.environ.get("CHROMEDRIVER_PATH"), chrome_options=chrome_options)
         driver.get("https://www.books.com.tw/?loc=tw_logo_001")
         keyword = driver.find_element_by_id("key")
         keyword.send_keys(search)
@@ -122,7 +122,7 @@ def tanlong(search):
         chrome_options.add_argument('blink-settings=imagesEnabled=false')  # 禁止加載圖片
         chrome_options.add_argument(
             "user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/95.0.4638.69 Safari/537.36")
-        driver = webdriver.Chrome(execution_path=chrome_options.binary_location, chrome_options=chrome_options)
+        driver = webdriver.Chrome(executable_path=os.environ.get("CHROMEDRIVER_PATH"), chrome_options=chrome_options)
         driver.get("https://www.tenlong.com.tw")
         key_xpath = '/html/body/div[3]/nav[1]/nav/div/form/input[2]'
         key_nodes = driver.find_element(By.XPATH, key_xpath)
@@ -215,7 +215,7 @@ def kingstone(search):
         chrome_options.add_argument('blink-settings=imagesEnabled=false')  # 禁止加載圖片
         chrome_options.add_argument(
             "user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/95.0.4638.69 Safari/537.36")
-        driver = webdriver.Chrome(execution_path=chrome_options.binary_location, chrome_options=chrome_options)
+        driver = webdriver.Chrome(executable_path=os.environ.get("CHROMEDRIVER_PATH"), chrome_options=chrome_options)
         driver.get("https://www.kingstone.com.tw")
         keyword = driver.find_element_by_class_name("headerSearchBar")
         keyword.send_keys(search)
@@ -326,7 +326,7 @@ def eslite(search):
         chrome_options.add_argument('blink-settings=imagesEnabled=false')  # 禁止加載圖片
         chrome_options.add_argument(
             "user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/95.0.4638.69 Safari/537.36")
-        driver = webdriver.Chrome(execution_path=chrome_options.binary_location, chrome_options=chrome_options)
+        driver = webdriver.Chrome(executable_path=os.environ.get("CHROMEDRIVER_PATH"), chrome_options=chrome_options)
         driver.get("https://www.eslite.com")
         key_xpath = '//div[@class="header-search-bar"]//form//input[@class="form-control"]'
         key_nodes = driver.find_element(By.XPATH, key_xpath)
@@ -420,7 +420,7 @@ def tcsb(search):
         chrome_options.add_argument('blink-settings=imagesEnabled=false')  # 禁止加載圖片
         chrome_options.add_argument(
             "user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/95.0.4638.69 Safari/537.36")
-        driver = webdriver.Chrome(execution_path=chrome_options.binary_location, chrome_options=chrome_options)
+        driver = webdriver.Chrome(executable_path=os.environ.get("CHROMEDRIVER_PATH"), chrome_options=chrome_options)
         driver.get("https://www.tcsb.com.tw")
         driver.find_element_by_xpath("//div[@class='sc-LzLrX eBAuqO']").click()
         time.sleep(3)
