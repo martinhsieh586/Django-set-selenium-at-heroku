@@ -74,10 +74,8 @@ The following is a link to the demo video, to quickly understand the website str
 - search for products Demonstration
  - url: https://www.youtube.com/watch?v=pRSR7oaIuRc&t=74s
 
-technical deficiencies:
+Project introduction:
 =========
-- At present, it is impossible to crawl too much data at one time due to the long crawl time, at most two pages
-- Because the crawling is all commodities, the price is relatively stable, and there is not much need for comparison. Later, this technology can be used to scrape commodities whose prices are more volatile, such as: stocks
-- The first page must enter the login or register page, otherwise there may be an error on the server side, and the local execution of the project is ok
-- This project is self-written and refers to the experience of various website masters except for the use of django presets for the structure and the reference of css parts.
-- This project can crawl the in-depth pages of each website, but due to the limitation of the webpage built on heroku, the waiting time for response is too long and there are bugs, so only one page of each website can be crawled, and local operations can crawl multiple pages
+- Since this project is based on the comparison target of various bookstore websites, there is no need to capture too much data to prevent the data availability from being reduced.
+- This website is maintained every other month to prevent the html structure of the crawled website from being updated and the data cannot be crawled.
+- This website is continuously updated, the goal is to improve the response speed of the web page and the variety of crawled data.
